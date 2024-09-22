@@ -4,8 +4,8 @@ const twilio = require('twilio');
 const nodemailer = require('nodemailer');
 const bcrypt = require('bcrypt');
 
-const accountSid = TWILIO_ACCOUNT_SID;
-const authToken = TWILIO_ACCOUNT_AUTH_TOKEN;
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_ACCOUNT_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 
 let otpStorage = {};
